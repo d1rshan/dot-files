@@ -1,0 +1,80 @@
+/* ── Rofi Theme ────────────────────────────── */
+
+/* Global defaults */
+* {
+  font: "JetBrainsMono Nerd Font 11";
+  blur: true;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+/* ── Window ──────────────────────────────── */
+window {
+  width: 750px;
+  height: 625px;
+  location: center;
+  blur: true;
+  border: 2px;
+  border-radius: 10px;
+  border-color: #555555;
+  background-color: transparent;
+  padding: 0px;
+  // margin: 30px 50px;
+}
+
+/* ── Layout ──────────────────────────────── */
+mainbox {
+  orientation: horizontal;
+  children: [ "contentbox" ];
+  spacing: 0px;
+  padding: 0px;
+}
+
+contentbox {
+  orientation: vertical;
+  children: [ "entry", "listview" ];
+  spacing: 0px;
+  padding: 0px;
+  expand: true;
+}
+
+/* ── Elements ────────────────────────────── */
+element {
+  border-radius: 0px;
+}
+
+element-text, element-icon {
+  padding: 6px 8px;
+  spacing: 2px;
+  text-color: #B1BAB1;
+}
+
+element selected {
+  background-color: rgba(255,255,255,0.10);
+  text-color: #FFFFFF;
+  border-radius: 3px;
+}
+
+/* ── Input & Prompt ──────────────────────── */
+prompt {
+  enabled: false;
+  background-color: transparent;
+  text-color: #B1BAB1;
+  padding: 5px 10px;
+}
+
+entry {
+  padding: 8px;
+  expand: false;
+  font: "JetBrainsMono Nerd Font 12";
+  text-color: #B1BAB1;
+  border-radius: 0px 3px 0px 0px;
+}
+
+/* ── Listview ────────────────────────────── */
+listview {
+  lines: 1;
+  border-radius: 0px 0px 3px 0px;
+  padding: 5px;
+}

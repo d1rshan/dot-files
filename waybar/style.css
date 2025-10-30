@@ -1,0 +1,132 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh  shhheersh
+   Waybar CSS styling
+   vers. 1.0
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* === Base Waybar Styling ================================================= */
+
+waybar * {
+  border: 2px;
+  border-radius: 15px;
+  min-height: 0;
+  font-size: 12px;
+}
+
+#waybar {
+  font-family: "JetBrainsMono Nerd Font";
+  background-color: transparent;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+window#waybar {
+  background: transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  color: #B1BAB1;
+  border: 2px solid #555555;
+  border-radius: 10px;
+}
+
+
+/* === Workspaces ========================================================== */
+
+#workspaces {
+  background-color: transparent;
+  
+}
+#workspaces button {
+  all: initial;
+  min-width: 0;
+  box-shadow: inherit;
+  padding: 6px 6px;
+  margin: 6px 3px;
+  color: #B1BAB1;
+}
+
+#workspaces button.active {
+  color: #FFFFFF;
+}
+/* === Default Module Container Styling ==================================== */
+
+#custom-microphone,
+#bluetooth,
+#custom-bluetooth,
+#custom-brightness,
+#custom-volume,
+#custom-battery,
+#custom-power,
+#custom-asus-profile,
+#network,
+#battery,
+#pulseaudio,
+#backlight,
+#custom-vpn,
+#clock,
+#tray {
+  color: #B1BAB1;
+  padding: 6px 12px;
+  margin: 6px 6px;
+}
+
+#bluetooth.disabled {
+  color: #fab387;
+}
+
+#custom-bluetooth {
+  color: #56b6c2;
+  transition: color 0.2s ease-in-out;
+}
+
+
+/* === Network ============================================================= */
+
+#network.disconnected {
+  background-color: #e06c75;
+  color: #1e1e2e;
+}
+
+
+/* === Asus Profile ======================================================== */
+
+#custom-asus-profile {
+  font-weight: bold;
+  font-size: 12px;
+  color: #e5c07b;
+}
+
+/* === Brightness ========================================================== */
+
+#backlight {
+  background-color: #3b4252;
+}
+
+
+/* === Tray ================================================================ */
+
+#tray {
+  padding: 4px 8px;
+  /* background-color: #1e1e2e; */
+}
+
+
+/* === Custom Workspace Labels ============================================= */
+
+#custom-work-left,
+#custom-work-right {
+  padding: 6px 6px;
+  margin: 6px 3px;
+}
+
+tooltip {
+  color: #56b6c2;
+  background-color: #3b4252;
+  border: 1px solid #56b6c2;
+  font-weight: bold;
+}
+
+tooltip label {
+  color: #78bec7;
+}
+

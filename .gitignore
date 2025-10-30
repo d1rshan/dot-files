@@ -1,0 +1,55 @@
+# ====== SYSTEM / ENV ======
+*.swp
+*.swo
+*.bak
+*.tmp
+*.lock
+.DS_Store
+
+# ====== SECRET / PERSONAL DATA ======
+*.db
+*.key
+*.pem
+*.gpg
+*.sqlite*
+connections.db
+.gsd-keyboard.settings-ported
+
+# ====== APP CACHES / STATE ======
+gvfs/
+yay/
+Kitware/
+ibus/
+pulse/
+autostart/  # keep only if manually edited
+systemd/    # keep user services manually created, ignore rest
+gnome-shell/
+dconf/
+evolution/
+qalculate/
+nwg-*/
+session
+gtk-3.0/
+gtk-4.0/
+nextjs-nodejs/
+inngest/
+systemd/
+sdf/
+Code/*
+!Code/User/
+Code/User/*
+!Code/User/settings.json
+
+# ====== BROWSERS / PASSWORD / HISTORY ======
+google-chrome/
+epiphany/
+
+# ====== MEDIA / THEMES THAT BLOAT ======
+spotify/
+
+# ====== RANDOM GARBAGE ======
+gsd-keyboard.settings-ported
+pavucontrol.ini
+mimeapps.list
+user-dirs.dirs
+user-dirs.locale
