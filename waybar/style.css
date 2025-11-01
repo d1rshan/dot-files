@@ -1,132 +1,65 @@
-/* ──────────────────────────────────────────────────────────────────────────
-   °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh  shhheersh
-   Waybar CSS styling
-   vers. 1.0
-   ────────────────────────────────────────────────────────────────────────── */
-
-/* === Base Waybar Styling ================================================= */
-
-waybar * {
-  border: 2px;
-  border-radius: 15px;
-  min-height: 0;
-  font-size: 12px;
-}
-
-#waybar {
+* {
   font-family: "JetBrainsMono Nerd Font";
-  background-color: transparent;
-  border-radius: 10px;
-  opacity: 1;
+  font-size: 14px;
+  color: #B1BAB1;
 }
 
 window#waybar {
-  background: transparent;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  color: #B1BAB1;
-  border: 2px solid #555555;
-  border-radius: 10px;
+  background: rgba(15, 15, 15, 0.15); /* subtle dark, change to taste */
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 3px 10px;
 }
 
-
-/* === Workspaces ========================================================== */
-
-#workspaces {
-  background-color: transparent;
-  
-}
 #workspaces button {
-  all: initial;
-  min-width: 0;
-  box-shadow: inherit;
-  padding: 6px 6px;
-  margin: 6px 3px;
+  background: transparent;
+  padding: 0 6px;
+  margin: 0 3px;
   color: #B1BAB1;
+  transition: 0.2s;
 }
 
 #workspaces button.active {
   color: #FFFFFF;
 }
-/* === Default Module Container Styling ==================================== */
 
-#custom-microphone,
-#bluetooth,
-#custom-bluetooth,
-#custom-brightness,
-#custom-volume,
-#custom-battery,
-#custom-power,
-#custom-asus-profile,
-#network,
+#clock,
 #battery,
 #pulseaudio,
-#backlight,
-#custom-vpn,
-#clock,
-#tray {
-  color: #B1BAB1;
-  padding: 6px 12px;
-  margin: 6px 6px;
-}
-
-#bluetooth.disabled {
-  color: #fab387;
-}
-
-#custom-bluetooth {
-  color: #56b6c2;
-  transition: color 0.2s ease-in-out;
-}
-
-
-/* === Network ============================================================= */
-
-#network.disconnected {
-  background-color: #e06c75;
-  color: #1e1e2e;
-}
-
-
-/* === Asus Profile ======================================================== */
-
-#custom-asus-profile {
-  font-weight: bold;
-  font-size: 12px;
-  color: #e5c07b;
-}
-
-/* === Brightness ========================================================== */
-
-#backlight {
-  background-color: #3b4252;
-}
-
-
-/* === Tray ================================================================ */
-
-#tray {
-  padding: 4px 8px;
-  /* background-color: #1e1e2e; */
-}
-
-
-/* === Custom Workspace Labels ============================================= */
-
-#custom-work-left,
-#custom-work-right {
-  padding: 6px 6px;
-  margin: 6px 3px;
+#tray
+{
+  padding: 0 10px;
+  margin: 0 5px;
 }
 
 tooltip {
-  color: #56b6c2;
-  background-color: #3b4252;
-  border: 1px solid #56b6c2;
-  font-weight: bold;
+  background-color: #222;
+  color: #FFF;
+  border-radius: 6px;
 }
 
-tooltip label {
-  color: #78bec7;
+#custom-wayves_left,
+#custom-wayves_right {
+  padding: 6px 15px;
+}
+/* Pomodoro widget */
+#custom-pomo {
+  padding: 6px 12px;
+  color: #e8e8e8;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
+/* Hover highlight */
+
+/* When timer is running — highlight */
+#custom-pomo.running {
+  color: #ff7373;
+  font-weight: 600;
+}
+
+/* When finished */
+#custom-pomo.done {
+  color: #6fff6f;
+  font-weight: 600;
+}

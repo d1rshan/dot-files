@@ -1,178 +1,75 @@
-// ──────────────────────────────────────────────────────────────────────────
-//  °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh shhheersh
-//  Waybar config
-//  vers. 1.0.0
-// ──────────────────────────────────────────────────────────────────────────
-
 {
-  "layer": "top",
-  "position": "right",
-  "margin-top": 0,
-  "margin-right": 10,
-  "width": 10,
-  "height": 50,
+"layer": "top",
+"position": "bottom",
+"height": 50,
+"width": 600,
+"margin-bottom": 10,
 
-  // ── Modules Layout ───────────────────────────────────────────────
-  "modules-left": [
+"modules-left": [
+],
+
+"modules-center": [
+  "group/center"
+],
+
+"modules-right": [
+],
+
+"group/center": {
+  "orientation": "horizontal",
+  "modules": [
     "hyprland/workspaces",
-  ],
-
-  "modules-center": [
+  "custom/wayves_left",
     "clock",
-  ],
-
-  "modules-right": [
+  "custom/wayves_right",
+    "pulseaudio",
     "battery",
-  ],
-  // add "network" and "bluetooth" if needed
-
-  // ── Clock ────────────────────────────────────────────────────────
-  "clock": {
-    "tooltip-format": "{calendar}",
-    "format-alt": "  {:%a, %d %b %Y}",
-    "format": "{:%I\n%M\n%p}"
-  },
-
-  // ── Network ──────────────────────────────────────────────────────
-  "network": {
-    "format-wifi": "{icon}",
-    "format-icons": ["[ 󰤯  ]", "[ 󰤟  ]", "[ 󰤢  ]", "[ 󰤥  ]", "[ 󰤨  ]"],
-    "format-ethernet": "󰀂",
-    "format-alt": "󱛇",
-    "format-disconnected": "󰖪",
-    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-disconnected": "Disconnected",
-    "on-click": "nm-connection-editor",
-    "interval": 5,
-    "nospacing": 1
-  },
-
-  // ── Keyboard ─────────────────────────────────────────────────────
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": " {layout}"
-  },
-
-  // ── Bluetooth ────────────────────────────────────────────────────
-  "bluetooth": {
+    "tray",
+    "custom/pomo"
+  ]
+},
+  "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "enabled": "[  ]",
-      "disabled": "[ 󰂲 ]"
+      "active": "",
+      "default": ""
     },
-    "on-click": "~/.config/waybar/scripts/bluetooth-toggle.sh",
-    "tooltip-format": "Bluetooth is {status}",
-    "interval": 5
-  },
-
-  "hyprland/workspaces": {
-    "format": "{name}",
-    "active-only": true,
+    "active-only": false,
     "persistent-workspaces": {
-      "*": [1, 2, 3]
-    },
-    "justify": "center"
+      "*": [1, 2, 3, 4]
+    }
   },
 
-  // ── Asus Profile ─────────────────────────────────────────────────
-  "custom/asus-profile": {
-    "exec": "~/.config/waybar/scripts/asus-profile.sh",
-    "interval": 3,
-    "format": "{}",
-    "tooltip": true,
-    "tooltip-format": "Toggle ASUS profile",
-    "on-click": "/home/pewds/.config/cycle-profile.sh"
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%a, %d %b}"
   },
 
- "pulseaudio": {
-    "format": "󰕾 {volume}%",
-    "format-muted": "󰝟 muted",
-    "tooltip": false,
-    "scroll-step": 3, // volume scroll sensitivity
-    "on-click": "pavucontrol",
-    "on-click-right": "pamixer -t"
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": "󰝟"
   },
 
   "battery": {
-    "format": "{capacity}%",
-    "format-charging": "\n{capacity}%",
-    "format-icons": {
-      "default": [
-        "󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"
-      ]
-    },
-    "format-full": "Charged ",
-    "interval": 5,
-    "states": {
-      "warning": 20,
-      "critical": 10
-    },
-    "tooltip": false
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-icons": [
+      "󰂃","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂"
+    ]
   },
-
-  // ── Microphone ───────────────────────────────────────────────────
-  "custom/microphone": {
-    "exec": "~/.config/waybar/scripts/mic.sh",
-    "interval": 1,
-    "tooltip": true,
-    "tooltip-format": "Mic Toggle",
-    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-  },
-
-  // ── Brightness ───────────────────────────────────────────────────
-  "custom/brightness": {
-    "exec": "~/.config/waybar/scripts/brightness.sh",
-    "return-type": "json",
-    "interval": 2,
-    "on-click": "~/.config/waybar/scripts/brightness-toggle.sh",
-    "on-scroll-up": "brightnessctl set +5%",
-    "on-scroll-down": "brightnessctl set 5%-"
-  },
-
-  "backlight": {
-    "format": "󰛨  {percent}%",
-    "format-icons": ["󰃞","󰃟","󰃠","󰃝","󰃜","󰃛"],
-    "class": "flicker-bar",
-    "on-click": "~/.config/waybar/scripts/brightness-slider.sh"
-  },
-
-
-  // ── Volume ───────────────────────────────────────────────────────
-  "custom/volume": {
-    "exec": "~/.config/waybar/scripts/volume.sh",
-    "return-type": "json",
-    "interval": 1,
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
-    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-  },
-
-
-  // ── VPN ──────────────────────────────────────────────────────────
-  "custom/vpn": {
-    "exec": "~/.config/waybar/scripts/nordvpn-status.sh",
-    "interval": 5,
-    "on-click": "~/.config/waybar/scripts/nordvpn-toggle.sh",
+  "custom/wayves_left": {
     "format": "{}",
-    "markup": "pango",
-    "tooltip": true,
-    "tooltip-format": "VPN Status / Toggle"
+    "exec": "python ~/wayves/wayves.py -o cava=left -i cava=left -a cava=left"
   },
-
-  // ── Power ────────────────────────────────────────────────────────
-  "custom/power": {
-    "format": "[ 󰤆 ]",
-    "tooltip": true,
-    "tooltip-format": "Power Menu",
-    "on-click": "~/.config/waybar/scripts/powermenu.sh"
+  "custom/wayves_right": {
+    "format": "{}",
+    "exec": "python ~/wayves/wayves.py -o cava=right -i cava=right -a cava=right"
   },
-
-  // ── Spacer ───────────────────────────────────────────────────────
-  "custom/squares": {
-    "format": " ",
-    "tooltip": false
-  }
+"custom/pomo": {
+  "exec": "~/.config/waybar/scripts/pomo.sh",
+  "on-click": "~/.config/waybar/scripts/pomo.sh toggle",
+  "interval": 1,
+  "return-type": "json",
+  "format": "{}"
 }
-
+}

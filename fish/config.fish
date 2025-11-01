@@ -22,8 +22,10 @@ if status is-interactive # Commands to run in interactive sessions can go here
     alias ls 'eza --icons'
     alias clear "printf '\033[2J\033[3J\033[1;1H'"
     alias q 'qs -c ii'
-    
+    alias ff fastfetch
+    alias spotify spotify_player
 end
 
 # Created by `pipx` on 2025-10-17 15:05:14
 set PATH $PATH /home/darsh/.local/bin
+set -Ux EDITOR nvim

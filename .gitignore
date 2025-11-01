@@ -39,6 +39,7 @@ Code/*
 !Code/User/
 Code/User/*
 !Code/User/settings.json
+configstore/
 
 # ====== BROWSERS / PASSWORD / HISTORY ======
 google-chrome/
