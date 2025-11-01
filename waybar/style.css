@@ -45,7 +45,7 @@ tooltip {
 /* Pomodoro widget */
 #custom-pomo {
   padding: 6px 12px;
-  color: #e8e8e8;
+  /* color: #e8e8e8; */
   font-weight: 500;
   transition: background 0.15s ease, color 0.15s ease;
 }
@@ -54,12 +54,12 @@ tooltip {
 
 /* When timer is running — highlight */
 #custom-pomo.running {
-  color: #ff7373;
+  /* color: #ff7373; */
   font-weight: 600;
 }
 
 /* When finished */
 #custom-pomo.done {
-  color: #6fff6f;
+  /* color: #6fff6f; */
   font-weight: 600;
 }

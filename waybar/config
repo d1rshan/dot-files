@@ -2,7 +2,7 @@
 "layer": "top",
 "position": "bottom",
 "height": 50,
-"width": 600,
+"width": 510,
 "margin-bottom": 10,
 
 "modules-left": [
@@ -19,13 +19,11 @@
   "orientation": "horizontal",
   "modules": [
     "hyprland/workspaces",
-  "custom/wayves_left",
     "clock",
-  "custom/wayves_right",
+    "custom/pomo",
     "pulseaudio",
     "battery",
     "tray",
-    "custom/pomo"
   ]
 },
   "hyprland/workspaces": {

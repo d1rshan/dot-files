@@ -9,7 +9,7 @@ export MANPAGER="$EDITOR +Man!"
 export PATH="$HOME/bin:/usr/local/bin:/home/hypr/.local/bin:/home/hypr/.cargo/bin:$HOME/.bun/bin:/home/hypr/.spicetify:$PATH"
 
 # Cargo env
-[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+# [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 # ========================
 # >> Plugins
@@ -21,11 +21,11 @@ source ~/.zsh/zsh-completions/zsh-completions.plugin.zsh
 # >> Tools Init
 # ========================
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
 # bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+# [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # tdl completion
 
