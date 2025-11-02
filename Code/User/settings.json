@@ -6,7 +6,7 @@
   "workbench.editor.revealIfOpen": true,
   "editor.fontSize": 15,
   "window.zoomLevel": 1.3,
-  "window.titleBarStyle": "native",
+  "window.titleBarStyle": "custom",
    "editor.inlineSuggest.enabled": true,
   "editor.stickyScroll.enabled": true,
   "editor.renderLineHighlight": "none",
@@ -45,7 +45,8 @@
   "explorer.confirmPasteNative": false,
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "glassit-linux.opacity": 50,
 
   
   }

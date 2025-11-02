@@ -12,7 +12,7 @@ window#waybar {
 }
 
 #workspaces button {
-  background: transparent;
+  all:unset;
   padding: 0 6px;
   margin: 0 3px;
   color: #B1BAB1;
@@ -20,7 +20,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: #FFFFFF;
+    color: #FFFFFF;
+    border: none;
 }
 
 #clock,

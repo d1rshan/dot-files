@@ -9,6 +9,11 @@ if status is-interactive
 
     alias ls 'eza --icons'
     alias spotify spotify_player
+    alias waybar_reload 'killall waybar && waybar && waybar & disown'
+    alias bhai tgpt
+    alias matrix 'unimatrix -s 96'
+
+    set -x EDITOR nvim
 
     starship init fish | source
 end

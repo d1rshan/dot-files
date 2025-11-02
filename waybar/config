@@ -1,51 +1,51 @@
 {
-"layer": "top",
-"position": "bottom",
-"height": 50,
-"width": 510,
-"margin-bottom": 10,
+  "output": "eDP-1",
+  "layer": "top",
+  "position": "top",
+  "height": 50,
+  "width": 500,
+  "margin-top": 10,
 
-"modules-left": [
-],
+  "modules-left": [],
+  "modules-center": [
+    "group/center"
+  ],
+  "modules-right": [],
 
-"modules-center": [
-  "group/center"
-],
+  "group/center": {
+    "orientation": "horizontal",
+    "modules": [
+      "hyprland/workspaces",
+      "clock",
+      "custom/pomo",
+      "pulseaudio",
+      "battery",
+      "tray"
+    ]
+  },
 
-"modules-right": [
-],
-
-"group/center": {
-  "orientation": "horizontal",
-  "modules": [
-    "hyprland/workspaces",
-    "clock",
-    "custom/pomo",
-    "pulseaudio",
-    "battery",
-    "tray",
-  ]
-},
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "active": "",
-      "default": ""
+      "active": "<span color='#79856A'></span>",
+      "default": "<span color='#B1BAB1'></span>",
+      "empty": "<span></span>"
     },
-    "active-only": false,
     "persistent-workspaces": {
-      "*": [1, 2, 3, 4]
+      "*": 3
     }
   },
 
   "clock": {
     "format": "{:%I:%M %p}",
-    "format-alt": "{:%a, %d %b}"
+    "format-alt": "{:%a, %d %b}",
+    "tooltip": false
   },
 
   "pulseaudio": {
     "format": "  {volume}%",
-    "format-muted": "󰝟"
+    "format-muted": "󰝟",
+    "tooltip": false
   },
 
   "battery": {
@@ -53,21 +53,29 @@
     "format-charging": " {capacity}%",
     "format-icons": [
       "󰂃","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂"
-    ]
+    ],
+    "tooltip": false
   },
+
   "custom/wayves_left": {
     "format": "{}",
     "exec": "python ~/wayves/wayves.py -o cava=left -i cava=left -a cava=left"
   },
+
   "custom/wayves_right": {
     "format": "{}",
     "exec": "python ~/wayves/wayves.py -o cava=right -i cava=right -a cava=right"
   },
-"custom/pomo": {
-  "exec": "~/.config/waybar/scripts/pomo.sh",
-  "on-click": "~/.config/waybar/scripts/pomo.sh toggle",
-  "interval": 1,
-  "return-type": "json",
-  "format": "{}"
-}
+
+  "custom/pomo": {
+    "exec": "~/.config/waybar/scripts/pomo.sh",
+    "on-click": "~/.config/waybar/scripts/pomo.sh toggle",
+    "interval": 1,
+    "return-type": "json",
+    "format": "{}"
+  },
+
+  "tray": {
+    "tooltip": false
+  }
 }

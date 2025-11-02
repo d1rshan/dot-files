@@ -40,6 +40,8 @@ Code/*
 Code/User/*
 !Code/User/settings.json
 configstore/
+github-copilot/
+xfce4/
 
 # ====== BROWSERS / PASSWORD / HISTORY ======
 google-chrome/
