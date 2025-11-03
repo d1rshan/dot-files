@@ -42,6 +42,7 @@ Code/User/*
 configstore/
 github-copilot/
 xfce4/
+discord/
 
 # ====== BROWSERS / PASSWORD / HISTORY ======
 google-chrome/
