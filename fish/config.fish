@@ -17,3 +17,6 @@ if status is-interactive
 
     starship init fish | source
 end
+
+# Created by `pipx` on 2025-11-03 06:45:28
+set PATH $PATH /home/darsh/.local/bin
