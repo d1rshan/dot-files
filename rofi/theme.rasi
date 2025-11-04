@@ -3,7 +3,7 @@
 /* Global defaults */
 * {
   font: "JetBrainsMono Nerd Font 11";
-  blur: true;
+  // blur: true;
   padding: 10px;
   background-color: transparent;
   border-radius: 0px;
@@ -11,14 +11,16 @@
 
 /* ── Window ──────────────────────────────── */
 window {
-  width: 750px;
-  height: 625px;
+  width: 450px;
+  height: 450px;
   location: center;
-  blur: true;
-  border: 2px;
+  anchor: center;
+  // blur: true;
+  border: 1px;
   border-radius: 10px;
   border-color: #555555;
-  background-color: transparent;
+  // background-color: transparent;
+  background-color: rgba(20,20,20,0.45);
   padding: 0px;
   // margin: 30px 50px;
 }

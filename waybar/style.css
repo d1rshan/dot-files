@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-  background: rgba(15, 15, 15, 0.15); /* subtle dark, change to taste */
+  background: rgba(20, 20, 20, 0.45);
   border: 2px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 3px 10px;
@@ -43,24 +43,10 @@ tooltip {
 #custom-wayves_right {
   padding: 6px 15px;
 }
-/* Pomodoro widget */
+
 #custom-pomo {
   padding: 6px 12px;
-  /* color: #e8e8e8; */
   font-weight: 500;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-/* Hover highlight */
-
-/* When timer is running — highlight */
-#custom-pomo.running {
-  /* color: #ff7373; */
-  font-weight: 600;
-}
-
-/* When finished */
-#custom-pomo.done {
-  /* color: #6fff6f; */
-  font-weight: 600;
-}

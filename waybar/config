@@ -1,9 +1,10 @@
 {
   "output": "eDP-1",
   "layer": "top",
+  "exclusive": true,
   "position": "top",
   "height": 50,
-  "width": 500,
+  "width": 450,
   "margin-top": 10,
 
   "modules-left": [],
