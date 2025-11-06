@@ -88,5 +88,7 @@
   "workbench.navigationControl.enabled": false,
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
-  "chat.commandCenter.enabled": false
+  "chat.commandCenter.enabled": false,
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.startupEditor": "none"
 }
