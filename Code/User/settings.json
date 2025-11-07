@@ -1,53 +1,92 @@
 {
-  "workbench.editor.showTabs": "none",
-  "workbench.editor.enablePreview": false,
-  "workbench.sideBar.location": "right",
-  "workbench.iconTheme": "Monokai Pro Icons",
-  "workbench.editor.revealIfOpen": true,
-  "editor.fontSize": 15,
-  "window.zoomLevel": 1.3,
-  "window.titleBarStyle": "custom",
-   "editor.inlineSuggest.enabled": true,
-  "editor.stickyScroll.enabled": true,
-  "editor.renderLineHighlight": "none",
-  "editor.cursorBlinking": "solid",
-  "editor.minimap.enabled": true,
-  "editor.guides.indentation": false,
-  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
-  "editor.fontLigatures": true,
-  "editor.tabSize": 4,
-  "editor.hover.sticky": true,
-  "editor.accessibilitySupport": "off",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.verticalScrollbarSize": 5,
-  "editor.cursorSurroundingLines": 8,
-  "workbench.layoutControl.enabled": false,
-  "chat.commandCenter.enabled": false,
-  "workbench.editor.editorActionsLocation": "hidden",
-  "window.menuBarVisibility": "hidden",
-  "workbench.navigationControl.enabled": false,
-  "window.commandCenter": false,
-  "workbench.editor.empty.hint": "hidden",
-  "workbench.colorCustomizations": {
-    "terminal.background": "default"
-  },
-  "files.eol": "\n",
-  "workbench.colorTheme": "Tokyo Night Storm",
+  "editor.formatOnSave": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.linkedEditing": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 1.5,
+  "launch": {},
+  "[json]": {},
+  // "workbench.statusBar.visible": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "update.showReleaseNotes": false,
+  "zenMode.hideLineNumbers": false,
+  "editor.lineNumbers": "relative",
+
+  // "vim.leader": "<Space>",
+  // "vim.hlsearch": true,
+  // "vim.normalModeKeyBindingsNonRecursive": [
+  //   // NAVIGATION
+  //   // switch b/w buffers
+  //   { "before": ["<S-h>"], "commands": [":bprevious"] },
+  //   { "before": ["<S-l>"], "commands": [":bnext"] },
+
+  //   // splits
+  //   { "before": ["leader", "v"], "commands": [":vsplit"] },
+  //   { "before": ["leader", "s"], "commands": [":split"] },
+
+  //   // panes
+  //   {
+  //     "before": ["leader", "h"],
+  //     "commands": ["workbench.action.focusLeftGroup"]
+  //   },
+  //   {
+  //     "before": ["leader", "j"],
+  //     "commands": ["workbench.action.focusBelowGroup"]
+  //   },
+  //   {
+  //     "before": ["leader", "k"],
+  //     "commands": ["workbench.action.focusAboveGroup"]
+  //   },
+  //   {
+  //     "before": ["leader", "l"],
+  //     "commands": ["workbench.action.focusRightGroup"]
+  //   },
+  //   // NICE TO HAVE
+  //   { "before": ["leader", "w"], "commands": [":w!"] },
+  //   { "before": ["leader", "q"], "commands": [":q!"] },
+  //   { "before": ["leader", "x"], "commands": [":x!"] },
+  //   {
+  //     "before": ["[", "d"],
+  //     "commands": ["editor.action.marker.prev"]
+  //   },
+  //   {
+  //     "before": ["]", "d"],
+  //     "commands": ["editor.action.marker.next"]
+  //   },
+  //   {
+  //     "before": ["<leader>", "c", "a"],
+  //     "commands": ["editor.action.quickFix"]
+  //   },
+  //   { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+  //   { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+  //   {
+  //     "before": ["g", "h"],
+  //     "commands": ["editor.action.showDefinitionPreviewHover"]
+  //   }
+  // ],
+  // "vim.visualModeKeyBindings": [
+  //   // Stay in visual mode while indenting
+  //   { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+  //   { "before": [">"], "commands": ["editor.action.indentLines"] },
+  //   // Move selected lines while staying in visual mode
+  //   { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+  //   { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+  //   // toggle comment selection
+  //   { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  // ],
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.lineNumbers": "relative",
-  "explorer.confirmPasteNative": false,
-  "[css]": {
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "glassit-linux.opacity": 50,
-
-  
-  }
-  
+  "window.menuBarVisibility": "compact",
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "chat.commandCenter.enabled": false
+}

@@ -43,6 +43,8 @@ configstore/
 github-copilot/
 xfce4/
 discord/
+libreoffice/
+xsettingsd/
 
 # ====== BROWSERS / PASSWORD / HISTORY ======
 google-chrome/
