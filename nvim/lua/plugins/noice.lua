@@ -1,3 +1,7 @@
 return {
-  { "folke/noice.nvim", enabled = false },
+  {
+    "folke/noice.nvim",
+    -- Disable this plugin
+    enabled = false,
+  },
 }
