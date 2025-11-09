@@ -1,14 +1,12 @@
-@import "waybar_colors.css";
-
 * {
   font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
-  color: @fg;
+  color: #B1BAB1;
 }
 
 window#waybar {
-  background: @bg;
-  border: 1px solid @border;
+  background: rgba(20, 20, 20, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 3px 10px;
 }
@@ -17,15 +15,13 @@ window#waybar {
   all:unset;
   padding: 0 6px;
   margin: 0 3px;
+  color: #B1BAB1;
   transition: 0.2s;
 }
 
-#workspaces button label {
-  color: @fg;
-}
-
-#workspaces button.active label {
-    color: @blue;
+#workspaces button.active {
+    color: #FFFFFF;
+    border: none;
 }
 
 #clock,
@@ -38,7 +34,8 @@ window#waybar {
 }
 
 tooltip {
-  background-color: @black;
+  background-color: #222;
+  color: #FFF;
   border-radius: 6px;
 }
 

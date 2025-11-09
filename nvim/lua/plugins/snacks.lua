@@ -5,7 +5,11 @@ return {
     lazy = false,
     opts = {
       picker = {
+        hidden = true,
         sources = {
+          files = {
+            hidden = true,
+          },
           explorer = {
             layout = {
               -- This tells snacks to hide the input bar

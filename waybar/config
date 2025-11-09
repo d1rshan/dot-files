@@ -28,9 +28,9 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "active": "<span color='#79856A'></span>",
-      "default": "<span color='#B1BAB1'></span>",
-      "empty": "<span></span>"
+      "active": "",
+      "default": "",
+      "empty": ""
     },
     "persistent-workspaces": {
       "*": 3
