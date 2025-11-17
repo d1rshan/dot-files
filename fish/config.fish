@@ -12,6 +12,7 @@ if status is-interactive
     alias waybar_reload 'killall waybar && waybar && waybar & disown'
     alias bhai tgpt
     alias matrix 'unimatrix -s 96'
+    alias dev 'cd ~/Desktop/dev'
 
     set -x EDITOR nvim
 
