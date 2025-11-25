@@ -1,10 +1,5 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    # cmatrix -u 5 -b -s -C green & sleep 1
-    # kill $last_pid
-
     set fish_greeting ""
-    # clear
     fastfetch
 
     alias ls 'eza --icons'
@@ -13,6 +8,8 @@ if status is-interactive
     alias bhai tgpt
     alias matrix 'unimatrix -s 96'
     alias dev 'cd ~/Desktop/dev'
+    alias ani ani-cli
+    alias ff fastfetch
 
     set -x EDITOR nvim
 
