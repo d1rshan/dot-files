@@ -1,29 +1,33 @@
-#!/bin/bash
+j!/bin/bash
 #
-# Your abstract color palette.
+# Discord-Inspired Terminal Palette
 # All colors are 6-digit hex codes WITHOUT the #
 
 export ALPHA="0.45"
 
 # --- Main Colors ---
-export BG="1e1e2e"
-export FG="cdd6f4"
-export BORDER="555555"
+export BG="0e1118"     # discord-like deep slate
+export FG="e6e9f2"     # soft cool white
+export BORDER="1b1f2a" # muted slate border
 
 # --- Terminal Colors (color0 - color15) ---
-export color0="45475a" # Black
-export color1="f38ba8" # Red
-export color2="a6e3a1" # Green
-export color3="f9e2af" # Yellow
-export color4="89b4fa" # Blue
-export color5="f5c2e7" # Magenta
-export color6="89dceb" # Cyan
-export color7="a6adc8" # White
-export color8="585b70"
-export color9="f38ba8"
-export color10="a6e3a1"
-export color11="f9e2af"
-export color12="89b4fa"
-export color13="f5c2e7"
-export color14="89dceb"
-export color15="bac2de"
+
+# Dark Row
+export color0="1a1d26" # Black (dark slate)
+export color1="6e73ad" # Muted lavender (replaces harsh red)
+export color2="7e82c4" # Soft indigo (discord vibes)
+export color3="a8ace0" # Light lavender-gray (for “yellow” slot)
+export color4="7e82c4" # Discord blurple (accent blue)
+export color5="7f88ff" # Light blurple for magenta slot
+export color6="aab1ff" # Pale blurple-lavender
+export color7="c7cbe3" # Light gray-white
+
+# Bright Row
+export color8="242832"  # Bright Black
+export color9="8b90c8"  # Bright lavender
+export color10="9ca0da" # Bright indigo
+export color11="c5c9ef" # Bright lavender-gray
+export color12="7480ff" # Bright blurple
+export color13="a9afff" # Bright pastel blurple
+export color14="d0d4ff" # Very pale lavender
+export color15="ffffff" # Pure white
