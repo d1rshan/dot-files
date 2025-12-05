@@ -1,9 +1,9 @@
 add_newline = false
 
 format = """\
-[](fg:blue)\
+[](fg:green)\
 $os\
-[](bg:blue fg:red)\
+[](bg:green fg:red)\
 $username\
 [](bg:red fg:green)\
 $directory\
@@ -20,7 +20,7 @@ disabled = false
 
 [os]
 disabled = false
-style = 'bg:blue fg:black'
+style = 'bg:green fg:black'
 [os.symbols]
 Alpaquita = " "
 Alpine = " "
