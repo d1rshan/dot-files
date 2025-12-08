@@ -10,6 +10,10 @@ if status is-interactive
     alias dev 'cd ~/Desktop/dev'
     alias ani ani-cli
     alias ff fastfetch
+    alias theme 'nvim ~/.config/theme/colors.sh'
+    alias reload_theme '~/.config/theme/apply_theme.sh'
+    alias hyprland.conf 'nvim ~/.config/hypr/hyprland.conf'
+    alias clock 'tty-clock -c -t -s'
 
     set -x EDITOR nvim
 
