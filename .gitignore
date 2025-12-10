@@ -58,7 +58,22 @@ goa-1.0/
 gh/
 zsh/
 Code/
-
+Surf/
+QtProject/
+anytype/
+calcurse/
+chess-tui/
+chromium/
+google-chrome-for-testing/
+kdeconnect/
+manga-tui/
+menus/
+nyxt/
+obsidian/
+rclone/
+turborepo/
+vifm/
+vivaldi/
 
 # ====== BROWSERS / PASSWORD / HISTORY ======
 google-chrome/
