@@ -1,0 +1,10 @@
+{
+  "My Custom ID": {
+    "prefix": "idtext",
+    "body": [
+      "The value is: 23bce5135",
+      "Created by user: $1"
+    ],
+    "description": "Inserts the specific ID 23bce5135"
+  }
+}

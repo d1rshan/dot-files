@@ -14,11 +14,10 @@ if status is-interactive
     alias reload_theme '~/.config/theme/apply_theme.sh'
     alias hyprland.conf 'nvim ~/.config/hypr/hyprland.conf'
     alias clock 'tty-clock -c -t -s'
-
+    alias sync:Arch 'rclone sync ~/Arch gdrive:Arch --progress'
     set -x EDITOR nvim
 
     starship init fish | source
 end
 
-# Created by `pipx` on 2025-11-03 06:45:28
 set PATH $PATH /home/darsh/.local/bin
