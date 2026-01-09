@@ -15,6 +15,7 @@ if status is-interactive
     alias hyprland.conf 'nvim ~/.config/hypr/hyprland.conf'
     alias clock 'tty-clock -c -t -s'
     alias sync:Arch 'rclone sync ~/Arch gdrive:Arch --progress'
+    alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
     set -x EDITOR nvim
 
     starship init fish | source

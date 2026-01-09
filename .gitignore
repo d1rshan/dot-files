@@ -1,90 +1,39 @@
-# ====== SYSTEM / ENV ======
-*.swp
-*.swo
-*.bak
-*.tmp
-*.lock
-.DS_Store
+# ignore everything
+*
 
-# ====== SECRET / PERSONAL DATA ======
-*.db
-*.key
-*.pem
-*.gpg
-*.sqlite*
-connections.db
-.gsd-keyboard.settings-ported
+# allow .config itself
+!.config/
 
-# ====== APP CACHES / STATE ======
-gvfs/
-yay/
-Kitware/
-ibus/
-pulse/
-autostart/  # keep only if manually edited
-systemd/    # keep user services manually created, ignore rest
-gnome-shell/
-dconf/
-evolution/
-qalculate/
-nwg-*/
-session
-gtk-3.0/
-gtk-4.0/
-nextjs-nodejs/
-inngest/
-systemd/
-sdf/
-Code/*
-!Code/User/
-Code/User/*
-!Code/User/settings.json
-configstore/
-github-copilot/
-xfce4/
-discord/
-libreoffice/
-xsettingsd/
-create-next-app-nodejs/
-lazygit/
-xsettingsd/
-mpv/
-mpd/
-cava/
-Electron/
-btop/
-gptme/
-goa-1.0/
-gh/
-zsh/
-Code/
-Surf/
-QtProject/
-anytype/
-calcurse/
-chess-tui/
-chromium/
-google-chrome-for-testing/
-kdeconnect/
-manga-tui/
-menus/
-nyxt/
-obsidian/
-rclone/
-turborepo/
-vifm/
-vivaldi/
+# allow selected configs
+!.config/hypr/
+!.config/hypr/**
 
-# ====== BROWSERS / PASSWORD / HISTORY ======
-google-chrome/
-epiphany/
+!.config/waybar/
+!.config/waybar/**
 
-# ====== MEDIA / THEMES THAT BLOAT ======
-spotify/
+!.config/kitty/
+!.config/kitty/**
 
-# ====== RANDOM GARBAGE ======
-gsd-keyboard.settings-ported
-pavucontrol.ini
-mimeapps.list
-user-dirs.dirs
-user-dirs.locale
+!.config/nvim/
+!.config/nvim/**
+
+!.config/fastfetch/
+!.config/fastfetch/**
+
+!.config/fish/
+!.config/fish/**
+
+!.config/rofi/
+!.config/rofi/**
+
+!.config/swaync/
+!.config/swaync/**
+
+!.config/theme/
+!.config/theme/**
+
+!.config/yazi/
+!.config/yazi/**
+
+!.config/starship.toml
+
