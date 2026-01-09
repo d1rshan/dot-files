@@ -2,27 +2,19 @@
   "layer": "top",
   "exclusive": true,
   "position": "top",
-  "height": 50,
-  "width": 450,
   "margin-top": 10,
+  "reload_style_on_change": true,
 
   "modules-left": [],
   "modules-center": [
-    "group/center"
+    "hyprland/workspaces",
+    "clock",
+    "custom/pomo",
+    "pulseaudio",
+    "battery",
+    "tray"
   ],
   "modules-right": [],
-
-  "group/center": {
-    "orientation": "horizontal",
-    "modules": [
-      "hyprland/workspaces",
-      "clock",
-      "custom/pomo",
-      "pulseaudio",
-      "battery",
-      "tray"
-    ]
-  },
 
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -32,39 +24,36 @@
       "empty": ""
     },
     "persistent-workspaces": {
-      "*": 3
+      "*": 5
     }
   },
 
   "clock": {
     "format": "{:%I:%M %p}",
     "format-alt": "{:%a, %d %b}",
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
   },
 
   "pulseaudio": {
-    "format": "  {volume}%",
+    "format": "{icon}  {volume}%",
     "format-muted": "󰝟",
-    "tooltip": false
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "tooltip": false,
+    "on-click": "pavucontrol"
   },
 
   "battery": {
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
-    "format-icons": [
-      "󰂃","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂"
-    ],
+    "format-icons": ["󰂃","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂"],
     "tooltip": false
-  },
-
-  "custom/wayves_left": {
-    "format": "{}",
-    "exec": "python ~/wayves/wayves.py -o cava=left -i cava=left -a cava=left"
-  },
-
-  "custom/wayves_right": {
-    "format": "{}",
-    "exec": "python ~/wayves/wayves.py -o cava=right -i cava=right -a cava=right"
   },
 
   "custom/pomo": {
@@ -72,10 +61,21 @@
     "on-click": "~/.config/waybar/scripts/pomo.sh toggle",
     "interval": 1,
     "return-type": "json",
-    "format": "{}"
+    "format": " {}"
   },
 
   "tray": {
+    "spacing": 10,
     "tooltip": false
+  },
+
+  // Keeping your custom definitions in case you want to use them later
+  "custom/wayves_left": {
+    "format": "{}",
+    "exec": "python ~/wayves/wayves.py -o cava=left -i cava=left -a cava=left"
+  },
+  "custom/wayves_right": {
+    "format": "{}",
+    "exec": "python ~/wayves/wayves.py -o cava=right -i cava=right -a cava=right"
   }
 }

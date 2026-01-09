@@ -1,55 +1,81 @@
-@import "waybar_colors.css";
+@import "../../.cache/wal/colors-waybar.css";
 
 * {
   font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
-  color: @fg;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
 }
 
 window#waybar {
-  background: @bg;
-  border: 1px solid @border;
-  border-radius: 12px;
-  padding: 3px 10px;
+  background: transparent; /* Essential */
+  color: @foreground;
+}
+
+.modules-center {
+  background: alpha(@background,0.5);
+  border: 1px solid #5E5E5E;
+  border-radius: 15px;
+  padding: 12px 10px; /* Adjust padding inside the island */
+}
+/* --- Modules --- */
+
+#workspaces {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid alpha(@foreground, 0.2); /* Subtle separator after workspaces */
 }
 
 #workspaces button {
-  all:unset;
-  padding: 0 6px;
-  margin: 0 3px;
-  transition: 0.2s;
+  padding: 0 2px;
+  color: alpha(@foreground, 0.4);
+  transition: 0.3s ease;
 }
 
-#workspaces button label {
-  color: @fg;
+#workspaces button:hover {
+  background: none;
+  color: @foreground;
+  box-shadow: none;
+  text-shadow: none;
 }
 
-#workspaces button.active label {
-    color: @blue;
+#workspaces button.active {
+  color: @background;
 }
 
 #clock,
 #battery,
 #pulseaudio,
-#tray
-{
-  padding: 0 10px;
-  margin: 0 5px;
+#custom-pomo,
+#tray {
+  padding: 0 8px;
+  margin: 0;
 }
 
-tooltip {
-  background-color: @black;
-  border-radius: 6px;
-}
-
-#custom-wayves_left,
-#custom-wayves_right {
-  padding: 6px 15px;
+/* Hover effects for interactivity */
+#clock:hover,
+#battery:hover,
+#pulseaudio:hover,
+#custom-pomo:hover {
+  background: alpha(@foreground, 0.1);
+  border-radius: 8px;
 }
 
 #custom-pomo {
-  padding: 6px 12px;
-  font-weight: 500;
-  transition: background 0.15s ease, color 0.15s ease;
+  color: alpha(@foreground, 0.6);
+  font-weight: bold;
+}
+
+
+/* Tooltip Styling */
+tooltip {
+  background: alpha(@background,0.5);
+  border: 1px solid @background;
+  border-radius: 8px;
+}
+
+tooltip label {
+  color: @foreground;
 }
 
