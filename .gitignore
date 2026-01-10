@@ -23,14 +23,11 @@
 !.config/fish/
 !.config/fish/**
 
-!.config/rofi/
-!.config/rofi/**
+!.config/wofi/
+!.config/wofi/**
 
 !.config/swaync/
 !.config/swaync/**
-
-!.config/theme/
-!.config/theme/**
 
 !.config/yazi/
 !.config/yazi/**

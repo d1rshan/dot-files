@@ -1,23 +1,64 @@
-#!/bin/bash
-WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
-#I dont know what the fuck I am doing
-menu() {
-  find "${WALLPAPER_DIR}" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) | awk '{print "img:"$0}'
+#!/usr/bin/env bash
+
+# --- Configuration ---
+WALL_DIR="$HOME/Pictures/Wallpapers"
+CACHE_DIR="$HOME/.cache/wallpaper-selector"
+THUMB_W="300"
+THUMB_H="200"
+
+mkdir -p "$CACHE_DIR"
+
+# --- Function: Generate Thumbnails ---
+# Wofi struggles with high-res images, so we make small versions.
+gen_thumb() {
+  magick "$1" -thumbnail "${THUMB_W}x${THUMB_H}^" -gravity center -extent "${THUMB_W}x${THUMB_H}" "$2"
 }
-main() {
-  choice=$(menu | wofi -c ~/.config/wofi/wallpaper -s ~/.config/wofi/style-wallpaper.css --show dmenu --prompt "Select Wallpaper:" -n)
-  selected_wallpaper=$(echo "$choice" | sed 's/^img://')
-  swww img "$selected_wallpaper" --transition-type any --transition-fps 60 --transition-duration .5
-  wal -i "$selected_wallpaper" -n --cols16
-  swaync-client --reload-css
-  cat ~/.cache/wal/colors-kitty.conf >~/.config/kitty/current-theme.conf
-  pywalfox update
-  color1=$(awk 'match($0, /color2=\47(.*)\47/,a) { print a[1] }' ~/.cache/wal/colors.sh)
-  color2=$(awk 'match($0, /color3=\47(.*)\47/,a) { print a[1] }' ~/.cache/wal/colors.sh)
-  cava_config="$HOME/.config/cava/config"
-  sed -i "s/^gradient_color_1 = .*/gradient_color_1 = '$color1'/" $cava_config
-  sed -i "s/^gradient_color_2 = .*/gradient_color_2 = '$color2'/" $cava_config
-  pkill -USR2 cava 2>/dev/null
-  source ~/.cache/wal/colors.sh && cp -r $wallpaper ~/wallpapers/pywallpaper.jpg
+
+# --- Build the Wofi Menu ---
+generate_menu() {
+  for img in "$WALL_DIR"/*.{jpg,jpeg,png,webp}; do
+    [[ -f "$img" ]] || continue
+
+    thumb="$CACHE_DIR/$(basename "${img%.*}").png"
+
+    # Only generate if thumb doesn't exist or image is newer
+    if [[ ! -f "$thumb" ]] || [[ "$img" -nt "$thumb" ]]; then
+      gen_thumb "$img" "$thumb"
+    fi
+
+    # Wofi format: img:PATH\x00info:NAME
+    echo -en "img:$thumb\x00info:$(basename "$img")\n"
+  done
 }
-main
+
+# --- Execution ---
+selected=$(generate_menu | wofi --show dmenu \
+  --prompt "Select Wallpaper" \
+  --allow-images \
+  --columns 2 \
+  --image-size 200 \
+  --width 800 \
+  --height 500 \
+  --cache-file /dev/null)
+
+# --- Apply Wallpaper ---
+if [ -n "$selected" ]; then
+  # Extract filename from the wofi selection
+  # Wofi returns "img:/path/to/cache/file.png"
+  # We need to map that back to the original file in $WALL_DIR
+  filename=$(basename "${selected#img:}")
+  # Remove the .png extension added by the cache and find the original
+  raw_name="${filename%.*}"
+
+  # Find the original file (supports different extensions)
+  original=$(find "$WALL_DIR" -type f -name "$raw_name.*" | head -n 1)
+
+  if [ -n "$original" ]; then
+    # Hyprpaper Logic
+    hyprctl hyprpaper preload "$original"
+    hyprctl hyprpaper wallpaper ",$original"
+    hyprctl hyprpaper unload all
+    wal -i "$original" -n -q
+    notify-send "Wallpaper Updated" "$(basename "$original")" -i "$original"
+  fi
+fi
