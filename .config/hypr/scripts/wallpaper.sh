@@ -58,6 +58,7 @@ if [ -n "$selected" ]; then
     hyprctl hyprpaper preload "$original"
     hyprctl hyprpaper wallpaper ",$original"
     hyprctl hyprpaper unload all
+
     wal -i "$original" -n -q
     notify-send "Wallpaper Updated" "$(basename "$original")" -i "$original"
   fi

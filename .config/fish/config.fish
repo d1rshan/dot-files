@@ -15,7 +15,10 @@ if status is-interactive
     alias hyprland.conf 'nvim ~/.config/hypr/hyprland.conf'
     alias clock 'tty-clock -c -t -s'
     alias sync:Arch 'rclone sync ~/Arch gdrive:Arch --progress'
-    alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+    alias dot 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+    alias gif 'python3 ~/fun_overlay/main.py ~/fun_overlay/your_gif.gif'
+    alias chika 'python3 ~/fun_overlay/main.py ~/fun_overlay/chika.gif'
+    alias glog 'git log --pretty=format:"%ad | %h | %s" --date=format:"%H:%M:%S"'
     set -x EDITOR nvim
 
     starship init fish | source

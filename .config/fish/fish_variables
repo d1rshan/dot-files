@@ -2,6 +2,4 @@
 # VERSION: 3.0
 SETUVAR --export --path PUPPETEER_EXECUTABLE_PATH:/usr/bin/chromium
 SETUVAR __fish_initialized:4300
-SETUVAR --export fish_user_paths:/home/darsh/\x2ecargo/bin
-
-
+SETUVAR --export fish_user_paths:/home/darsh/\x2ebun/bin\x1e/home/darsh/\x2ecargo/bin

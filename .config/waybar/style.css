@@ -29,7 +29,7 @@ window#waybar {
 
 #workspaces button {
   padding: 0 2px;
-  color: alpha(@foreground, 0.4);
+  color: alpha(@color7, 0.4);
   transition: 0.3s ease;
 }
 
@@ -41,7 +41,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: @background;
+  color: @color5;
 }
 
 #clock,
