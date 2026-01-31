@@ -1,6 +1,6 @@
 if status is-interactive
     set fish_greeting ""
-    fastfetch
+    fastfetch --logo none
 
     alias ls 'eza --icons'
     alias spotify spotify_player
@@ -19,9 +19,15 @@ if status is-interactive
     alias gif 'python3 ~/fun_overlay/main.py ~/fun_overlay/your_gif.gif'
     alias chika 'python3 ~/fun_overlay/main.py ~/fun_overlay/chika.gif'
     alias glog 'git log --pretty=format:"%ad | %h | %s" --date=format:"%H:%M:%S"'
+    alias uni 'cd ~/Desktop/23BCE5135/'
+    alias helium helium-browser
     set -x EDITOR nvim
 
     starship init fish | source
 end
 
 set PATH $PATH /home/darsh/.local/bin
+set -gx PYENV_ROOT $HOME/.pyenv
+fish_add_path $PYENV_ROOT/bin
+
+pyenv init - | source
