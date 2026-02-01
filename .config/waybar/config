@@ -69,6 +69,14 @@
     "tooltip": false
   },
 
+"network": {
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "󰈀  Wired",
+    "format-disconnected": "󰤭  Disconnected",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "on-click": ""
+  },
+
   // Keeping your custom definitions in case you want to use them later
   "custom/wayves_left": {
     "format": "{}",

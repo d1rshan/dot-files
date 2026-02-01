@@ -30,4 +30,11 @@ set PATH $PATH /home/darsh/.local/bin
 set -gx PYENV_ROOT $HOME/.pyenv
 fish_add_path $PYENV_ROOT/bin
 
-pyenv init - | source
+# pyenv init - | source
+
+# pnpm
+set -gx PNPM_HOME "/home/darsh/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
