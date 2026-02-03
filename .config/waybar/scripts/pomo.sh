@@ -3,8 +3,8 @@
 STATE_FILE=/tmp/break_state
 COOLDOWN_FILE=/tmp/break_cooldown
 
-DURATION=$((20 * 60)) # 20 minutes
-COOLDOWN=20           # 20 seconds
+DURATION=$((20 * 60))
+COOLDOWN=20
 
 case "$1" in
 start)

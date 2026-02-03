@@ -5,7 +5,6 @@
   "margin-top": 10,
   "reload_style_on_change": true,
 
-  "modules-left": [],
   "modules-center": [
     "hyprland/workspaces",
     "clock",
@@ -14,7 +13,6 @@
     "battery",
     "tray"
   ],
-  "modules-right": [],
 
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -31,8 +29,7 @@
   "clock": {
     "format": "{:%I:%M %p}",
     "format-alt": "{:%a, %d %b}",
-    "tooltip": true,
-    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    "tooltip": false
   },
 
   "pulseaudio": {
@@ -41,8 +38,8 @@
     "format-icons": {
       "default": ["", "", ""]
     },
-    "tooltip": false,
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "tooltip": false
   },
 
   "battery": {
@@ -67,23 +64,5 @@
   "tray": {
     "spacing": 10,
     "tooltip": false
-  },
-
-"network": {
-    "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "󰈀  Wired",
-    "format-disconnected": "󰤭  Disconnected",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-    "on-click": ""
-  },
-
-  // Keeping your custom definitions in case you want to use them later
-  "custom/wayves_left": {
-    "format": "{}",
-    "exec": "python ~/wayves/wayves.py -o cava=left -i cava=left -a cava=left"
-  },
-  "custom/wayves_right": {
-    "format": "{}",
-    "exec": "python ~/wayves/wayves.py -o cava=right -i cava=right -a cava=right"
   }
 }

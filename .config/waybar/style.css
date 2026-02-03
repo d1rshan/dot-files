@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-  background: transparent; /* Essential */
+  background: transparent; 
   color: @foreground;
 }
 
@@ -17,14 +17,13 @@ window#waybar {
   background: alpha(@background,0.5);
   border: 1px solid #5E5E5E;
   border-radius: 10px;
-  padding: 12px 10px; /* Adjust padding inside the island */
+  padding: 12px 10px; 
 }
-/* --- Modules --- */
 
 #workspaces {
   margin-right: 10px;
   padding-right: 10px;
-  border-right: 1px solid alpha(@foreground, 0.2); /* Subtle separator after workspaces */
+  border-right: 1px solid alpha(@foreground, 0.2); 
 }
 
 #workspaces button {
@@ -53,7 +52,6 @@ window#waybar {
   margin: 0;
 }
 
-/* Hover effects for interactivity */
 #clock:hover,
 #battery:hover,
 #pulseaudio:hover,
@@ -65,17 +63,5 @@ window#waybar {
 #custom-pomo {
   color: alpha(@foreground, 0.6);
   font-weight: bold;
-}
-
-
-/* Tooltip Styling */
-tooltip {
-  background: alpha(@background,0.5);
-  border: 1px solid @background;
-  border-radius: 8px;
-}
-
-tooltip label {
-  color: @foreground;
 }
 

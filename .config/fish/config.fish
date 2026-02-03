@@ -3,15 +3,10 @@ if status is-interactive
     fastfetch --logo none
 
     alias ls 'eza --icons'
-    alias spotify spotify_player
-    alias waybar_reload 'killall waybar && waybar && waybar & disown'
-    alias bhai tgpt
     alias matrix 'unimatrix -s 96'
     alias dev 'cd ~/Desktop/dev'
     alias ani ani-cli
     alias ff fastfetch
-    alias theme 'nvim ~/.config/theme/colors.sh'
-    alias reload_theme '~/.config/theme/apply_theme.sh'
     alias hyprland.conf 'nvim ~/.config/hypr/hyprland.conf'
     alias clock 'tty-clock -c -t -s'
     alias sync:Arch 'rclone sync ~/Arch gdrive:Arch --progress'
@@ -21,6 +16,7 @@ if status is-interactive
     alias glog 'git log --pretty=format:"%ad | %h | %s" --date=format:"%H:%M:%S"'
     alias uni 'cd ~/Desktop/23BCE5135/'
     alias helium helium-browser
+    alias files 'nautilus . & disown'
     set -x EDITOR nvim
 
     starship init fish | source
@@ -35,6 +31,49 @@ fish_add_path $PYENV_ROOT/bin
 # pnpm
 set -gx PNPM_HOME "/home/darsh/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+function gcl
+    if test (count $argv) -lt 1
+        echo "usage: gcl <repo> [dir]"
+        return 1
+    end
+
+    set repo $argv[1]
+    set dir $argv[2]
+
+    if test -n "$dir"
+        git clone git@github.com:d1rshan/$repo.git $dir
+    else
+        git clone git@github.com:d1rshan/$repo.git
+    end
+end
+
+function 2pdf
+    if test (count $argv) -ne 1
+        echo "Usage: 2pdf <file-or-directory>"
+        return 1
+    end
+
+    set target $argv[1]
+
+    if test -d $target
+        for f in $target/*.{ppt,pptx,doc,docx,xls,xlsx,odt,odp,ods}
+            if test -e $f
+                echo "Converting $f"
+                libreoffice --headless --convert-to pdf "$f"
+            end
+        end
+        return
+    end
+
+    libreoffice --headless --convert-to pdf "$target"
+end
+
+function dots
+    set -lx GIT_DIR $HOME/.dotfiles
+    set -lx GIT_WORK_TREE $HOME
+    nvim ~/.config
+end

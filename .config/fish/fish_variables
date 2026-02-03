@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export --path PUPPETEER_EXECUTABLE_PATH:/usr/bin/chromium
+SETUVAR --export BUN_INSTALL:/home/darsh/\x2ebun
+SETUVAR --export --path PATH:/home/darsh/\x2ebun/bin\x1e/home/darsh/\x2elocal/share/pnpm\x1e/run/user/1000/fnm_multishells/69379_1770011151103/bin\x1e/home/darsh/\x2elocal/share/fnm\x1e/usr/local/bin\x1e/usr/bin\x1e/home/darsh/\x2elocal/bin
 SETUVAR __fish_initialized:4300
-SETUVAR --export fish_user_paths:/home/darsh/\x2ebun/bin\x1e/home/darsh/\x2ecargo/bin
+SETUVAR --export fish_user_paths:/home/darsh/\x2ebun/bin
