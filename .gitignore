@@ -1,10 +1,10 @@
-# ignore everything
+# IGNORE EVERYTHING
 *
 
-# allow .config itself
+# ALLOW .CONFIG ITSELF
 !.config/
 
-# allow selected configs
+# ALLOW SELECTED CONFIGS
 !.config/hypr/
 !.config/hypr/**
 
@@ -23,8 +23,8 @@
 !.config/fish/
 !.config/fish/**
 
-!.config/wofi/
-!.config/wofi/**
+!.config/rofi/
+!.config/rofi/**
 
 !.config/swaync/
 !.config/swaync/**

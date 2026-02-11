@@ -1,3 +1,8 @@
+# ─────────────────────────────────────────────────────────────────────
+#  「✦ STARSHIP CONFIG ✦ 」
+# ─────────────────────────────────────────────────────────────────────
+
+# ── GLOBAL ───────────────────────────────────────────────────────────
 add_newline = false
 
 format = """\
@@ -13,11 +18,25 @@ $git_status\
 $all\
 $character"""
 
+# ── USER & DIRECTORY ─────────────────────────────────────────────────
 [username]
 show_always = true
 format = '[$user ](bg:red fg:black)'
 disabled = false
 
+[directory]
+format = "[$path](bg:green fg:black)"
+truncation_length = 2
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Scripts" = "󰲋 "
+
+# ── OS DETECTION ─────────────────────────────────────────────────────
 [os]
 disabled = false
 style = 'bg:green fg:black'
@@ -68,26 +87,16 @@ Unknown = " "
 Void = " "
 Windows = "󰍲 "
 
+# ── SHELL BEHAVIOR ───────────────────────────────────────────────────
 [cmd_duration]
 format = "[$duration](fg:red)"
-
-[directory]
-format = "[$path](bg:green fg:black)"
-truncation_length = 2
-truncation_symbol = "…/"
 
 [character]
 success_symbol = "[](bold blue)"
 error_symbol = "[✗](bold red)"
 disabled = false
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Scripts" = "󰲋 "
-
+# ── VERSION CONTROL ──────────────────────────────────────────────────
 [fossil_branch]
 symbol = "  "
 format = '[$symbol($version)]($style)'
@@ -100,6 +109,15 @@ format = '[$symbol($branch) ($version)]($style)'
 tag_symbol = '  '
 format = '[$symbol($version)]($style)'
 
+[hg_branch]
+symbol = "  "
+format = '[$symbol($version)]($style)'
+
+[pijul_channel]
+symbol = "  "
+format = '[$symbol($version)]($style)'
+
+# ── PROGRAMMING LANGUAGES ────────────────────────────────────────────
 [aws]
 symbol = "   "
 format = '[$symbol($version)]($style)'
@@ -160,14 +178,6 @@ format = '[$symbol($version)]($style)'
 symbol = "  "
 format = '[$symbol($version)]($style)'
 
-[hg_branch]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[hostname]
-ssh_symbol = "  "
-format = '[$symbol($version)]($style)'
-
 [java]
 symbol = "  "
 format = '[$symbol($version)]($style)'
@@ -182,10 +192,6 @@ format = '[$symbol($version)]($style)'
 
 [lua]
 symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[memory_usage]
-symbol = " 󰍛 "
 format = '[$symbol($version)]($style)'
 
 [meson]
@@ -220,10 +226,6 @@ format = '[$symbol($version)]($style)'
 symbol = "  "
 format = '[$symbol($version)]($style)'
 
-[pijul_channel]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
 [python]
 symbol = "  "
 format = '[$symbol($version)]($style)'
@@ -256,3 +258,11 @@ format = '[$symbol($version)]($style)'
 symbol = "  "
 format = '[$symbol($version)]($style)'
 
+# ── SYSTEM INFO ──────────────────────────────────────────────────────
+[memory_usage]
+symbol = " 󰍛 "
+format = '[$symbol($version)]($style)'
+
+[hostname]
+ssh_symbol = "  "
+format = '[$symbol($version)]($style)'

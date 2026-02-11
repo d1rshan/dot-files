@@ -1,40 +1,29 @@
+# ─────────────────────────────────────────────────────────────────────
+#  「✦ FISH CONFIG ✦ 」
+# ─────────────────────────────────────────────────────────────────────
+
+# ── INTERACTIVE SHELL ────────────────────────────────────────────────
 if status is-interactive
     set fish_greeting ""
     fastfetch --logo none
-
-    alias ls 'eza --icons'
-    alias matrix 'unimatrix -s 96'
-    alias dev 'cd ~/Desktop/dev'
-    alias ani ani-cli
-    alias ff fastfetch
-    alias hyprland.conf 'nvim ~/.config/hypr/hyprland.conf'
-    alias clock 'tty-clock -c -t -s'
-    alias sync:Arch 'rclone sync ~/Arch gdrive:Arch --progress'
-    alias dot 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-    alias gif 'python3 ~/fun_overlay/main.py ~/fun_overlay/your_gif.gif'
-    alias chika 'python3 ~/fun_overlay/main.py ~/fun_overlay/chika.gif'
-    alias glog 'git log --pretty=format:"%ad | %h | %s" --date=format:"%H:%M:%S"'
-    alias uni 'cd ~/Desktop/23BCE5135/'
-    alias helium helium-browser
-    alias files 'nautilus . & disown'
-    set -x EDITOR nvim
-
-    starship init fish | source
 end
 
-set PATH $PATH /home/darsh/.local/bin
-set -gx PYENV_ROOT $HOME/.pyenv
-fish_add_path $PYENV_ROOT/bin
+# ── ALIASES ──────────────────────────────────────────────────────────
+alias ls 'eza --icons'
+alias matrix 'unimatrix -s 96'
+alias dev 'cd ~/Desktop/dev'
+alias ani ani-cli
+alias ff fastfetch
+alias hyprland.conf 'nvim ~/.config/hypr/hyprland.conf'
+alias clock 'tty-clock -c -t -s'
+alias sync:Arch 'rclone sync ~/Arch gdrive:Arch --progress'
+alias dot 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias glog 'git log --pretty=format:"%ad | %h | %s" --date=format:"%H:%M:%S"'
+alias uni 'cd ~/Desktop/23BCE5135/'
+alias helium helium-browser
+alias files 'nautilus . & disown'
 
-# pyenv init - | source
-
-# pnpm
-set -gx PNPM_HOME "/home/darsh/.local/share/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-    set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
-
+# ── FUNCTIONS ────────────────────────────────────────────────────────
 function gcl
     if test (count $argv) -lt 1
         echo "usage: gcl <repo> [dir]"
@@ -76,4 +65,28 @@ function dots
     set -lx GIT_DIR $HOME/.dotfiles
     set -lx GIT_WORK_TREE $HOME
     nvim ~/.config
+end
+
+# ── TOOL INITIALIZATION ──────────────────────────────────────────────
+if status is-interactive
+    starship init fish | source
+end
+
+# ── ENVIRONMENT ──────────────────────────────────────────────────────
+set -x EDITOR nvim
+
+# PATH
+set PATH $PATH /home/darsh/.local/bin
+
+# PNPM
+set -gx PNPM_HOME "/home/darsh/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
+end
+
+# FNM (FAST NODE MANAGER)
+set FNM_PATH "/home/darsh/.local/share/fnm"
+if [ -d "$FNM_PATH" ]
+    set PATH "$FNM_PATH" $PATH
+    fnm env | source
 end

@@ -1,3 +1,8 @@
+// ───────────────────────────────────────────────────────────────────
+//  「✦ WAYBAR CONFIG ✦ 」
+// ───────────────────────────────────────────────────────────────────
+
+// ── BAR SETTINGS ───────────────────────────────────────────────────
 {
   "layer": "top",
   "exclusive": true,
@@ -5,6 +10,7 @@
   "margin-top": 10,
   "reload_style_on_change": true,
 
+// ── MODULES ────────────────────────────────────────────────────────
   "modules-center": [
     "hyprland/workspaces",
     "clock",
@@ -14,6 +20,7 @@
     "tray"
   ],
 
+// ── WORKSPACES ─────────────────────────────────────────────────────
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -26,12 +33,14 @@
     }
   },
 
+// ── CLOCK ──────────────────────────────────────────────────────────
   "clock": {
     "format": "{:%I:%M %p}",
     "format-alt": "{:%a, %d %b}",
     "tooltip": false
   },
 
+// ── AUDIO ──────────────────────────────────────────────────────────
   "pulseaudio": {
     "format": "{icon}  {volume}%",
     "format-muted": "󰝟",
@@ -42,6 +51,7 @@
     "tooltip": false
   },
 
+// ── BATTERY ────────────────────────────────────────────────────────
   "battery": {
     "states": {
         "warning": 30,
@@ -53,6 +63,7 @@
     "tooltip": false
   },
 
+// ── POMODORO ───────────────────────────────────────────────────────
   "custom/pomo": {
     "exec": "~/.config/waybar/scripts/pomo.sh",
     "on-click": "~/.config/waybar/scripts/pomo.sh toggle",
@@ -61,6 +72,7 @@
     "format": " {}"
   },
 
+// ── TRAY ───────────────────────────────────────────────────────────
   "tray": {
     "spacing": 10,
     "tooltip": false

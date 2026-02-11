@@ -1,0 +1,201 @@
+/* ───────────────────────────────────────────────────────────────────
+   「✦ ROFI GLASS THEME ✦ 」
+   ──────────────────────────────────────────────────────────────── */
+
+/* ── IMPORTS ──────────────────────────────────────────────────────*/
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+/* ── GLOBAL ───────────────────────────────────────────────────────*/
+* {
+    font: "JetBrainsMono Nerd Font 16px";
+}
+
+/* ── WINDOW ───────────────────────────────────────────────────────*/
+window {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px;
+    border-color: #5E5E5E;
+    border-radius: 10px;
+    padding: 0px;
+    width: 450px;
+    location: center;
+    anchor: center;
+    x-offset: 0;
+    y-offset: 0;
+    transparency: "real";
+}
+
+/* ── MAINBOX ──────────────────────────────────────────────────────*/
+mainbox {
+    enabled: true;
+    spacing: 0px;
+    padding: 0px;
+    orientation: vertical;
+    children: [ inputbar, listview, mode-switcher ];
+    background-color: transparent;
+}
+
+/* ── INPUTBAR ─────────────────────────────────────────────────────*/
+inputbar {
+    enabled: true;
+    spacing: 0px;
+    padding: 8px 10px;
+    margin: 0px;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 0px;
+    children: [ entry ];
+}
+
+prompt {
+    enabled: false;
+    text-color: @normal-foreground;
+    background-color: transparent;
+    str: "Search";
+    padding: 0px 10px 0px 0px;
+}
+
+entry {
+    enabled: true;
+    background-color: transparent;
+    text-color: @normal-foreground;
+    placeholder: "";
+    placeholder-color: @normal-foreground;
+    expand: true;
+    cursor: text;
+}
+
+/* ── LISTVIEW ─────────────────────────────────────────────────────*/
+listview {
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    cycle: true;
+    layout: vertical;
+    spacing: 0px;
+    scrollbar: false;
+    columns: 1;
+    dynamic: true;
+    lines: 8;
+    fixed-height: true;
+}
+
+/* ── ELEMENTS ─────────────────────────────────────────────────────*/
+element {
+    enabled: true;
+    padding: 6px 8px;
+    margin: 0px;
+    background-color: transparent;
+    text-color: @normal-foreground;
+    border: 0px;
+    border-radius: 3px;
+    orientation: horizontal;
+    children: [ element-icon, element-text ];
+}
+
+element-icon {
+    enabled: true;
+    background-color: transparent;
+    size: 1.2em;
+    margin: 0px 10px 0px 0px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    highlight: none;
+    expand: true;
+    vertical-align: 0.5;
+    format: "{text}";
+}
+
+/* ── ELEMENT STATES ───────────────────────────────────────────────*/
+element normal.normal {
+    background-color: transparent;
+    text-color: @normal-foreground;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color: @active-foreground;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color: @urgent-foreground;
+}
+
+element selected.normal {
+    background-color: rgba(194, 194, 197, 0.1);
+    text-color: @selected-normal-foreground;
+}
+
+element selected.active {
+    background-color: rgba(194, 194, 197, 0.1);
+    text-color: @selected-active-foreground;
+}
+
+element selected.urgent {
+    background-color: rgba(227, 94, 221, 0.2);
+    text-color: @selected-urgent-foreground;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @alternate-normal-foreground;
+}
+
+element alternate.active {
+    background-color: transparent;
+    text-color: @alternate-active-foreground;
+}
+
+element alternate.urgent {
+    background-color: transparent;
+    text-color: @alternate-urgent-foreground;
+}
+
+/* ── SCROLLBAR ────────────────────────────────────────────────────*/
+scrollbar {
+    width: 4px;
+    border: 0px;
+    handle-width: 8px;
+    padding: 0px;
+    background-color: transparent;
+    handle-color: @normal-foreground;
+}
+
+/* ── MESSAGES ─────────────────────────────────────────────────────*/
+message {
+    border: 0px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+textbox {
+    text-color: @normal-foreground;
+    background-color: transparent;
+}
+
+/* ── MODE SWITCHER ────────────────────────────────────────────────*/
+mode-switcher {
+    enabled: true;
+    spacing: 6px;
+    padding: 8px 10px;
+    margin: 8px 0px 0px 0px;
+    background-color: transparent;
+    border: 0px;
+}
+
+button {
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: transparent;
+    text-color: @normal-foreground;
+}
+
+button selected {
+    background-color: rgba(194, 194, 197, 0.1);
+    text-color: @selected-normal-foreground;
+}

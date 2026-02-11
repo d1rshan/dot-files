@@ -1,6 +1,9 @@
-// Inspired by Catnap
+// ─────────────────────────────────────────────────────────────────────
+//  「✦ FASTFETCH CONFIG ✦ 」
+// ─────────────────────────────────────────────────────────────────────
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  // ── LOGO ───────────────────────────────────────────────────────────
   "logo": {
     "source": "~/.config/fastfetch/ascii.txt",
     "type": "auto",
@@ -8,18 +11,11 @@
       "top": 1
     }
   },
-  // "logo": {
-  // 	// "source": "~/.config/fastfetch/pngs/bocchi.png",
-  //   "source": "",
-  // 	"type": "kitty",
-  // 	"height": 10,
-  // 	"padding": {
-  // 		"top": 1
-  // 	}
-  // },
+  // ── DISPLAY ────────────────────────────────────────────────────────
   "display": {
     "separator": " "
   },
+  // ── MODULES ────────────────────────────────────────────────────────
   "modules": [
     {
       "key": "╭───────────╮",

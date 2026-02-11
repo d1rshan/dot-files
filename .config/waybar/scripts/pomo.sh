@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# ─────────────────────────────────────────────────────────────────────
+#  「✦ POMODORO TIMER ✦ 」
+# ─────────────────────────────────────────────────────────────────────
+# WAYBAR MODULE FOR POMODORO-STYLE BREAK TIMER
+# ─────────────────────────────────────────────────────────────────────
 
 STATE_FILE=/tmp/break_state
 COOLDOWN_FILE=/tmp/break_cooldown

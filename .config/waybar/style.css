@@ -1,5 +1,11 @@
+/* ───────────────────────────────────────────────────────────────────
+   「✦ WAYBAR STYLES ✦ 」
+   ──────────────────────────────────────────────────────────────── */
+
+/* ── IMPORTS ──────────────────────────────────────────────────────*/
 @import "../../.cache/wal/colors-waybar.css";
 
+/* ── GLOBAL ───────────────────────────────────────────────────────*/
 * {
   font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
@@ -13,6 +19,7 @@ window#waybar {
   color: @foreground;
 }
 
+/* ── MODULES CONTAINER ────────────────────────────────────────────*/
 .modules-center {
   background: alpha(@background,0.5);
   border: 1px solid #5E5E5E;
@@ -20,6 +27,7 @@ window#waybar {
   padding: 12px 10px; 
 }
 
+/* ── WORKSPACES ───────────────────────────────────────────────────*/
 #workspaces {
   margin-right: 10px;
   padding-right: 10px;
@@ -43,6 +51,7 @@ window#waybar {
   color: @color5;
 }
 
+/* ── MODULES ──────────────────────────────────────────────────────*/
 #clock,
 #battery,
 #pulseaudio,
@@ -60,8 +69,8 @@ window#waybar {
   border-radius: 8px;
 }
 
+/* ── POMODORO ─────────────────────────────────────────────────────*/
 #custom-pomo {
   color: alpha(@foreground, 0.6);
   font-weight: bold;
 }
-
