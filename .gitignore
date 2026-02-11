@@ -26,11 +26,11 @@
 !.config/rofi/
 !.config/rofi/**
 
-!.config/swaync/
-!.config/swaync/**
-
 !.config/yazi/
 !.config/yazi/**
+
+!.config/mako/
+!.config/mako/**
 
 !.config/starship.toml
 
