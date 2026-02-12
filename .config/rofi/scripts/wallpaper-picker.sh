@@ -33,15 +33,28 @@ CHOICE=$(
       -p "Select Wallpaper" \
       -theme "$HOME/.config/rofi/themes/glass.rasi" \
       -theme-str '
+      window {
+        width: 58%;
+      }
+
       listview {
-        columns: 4;
+        layout: vertical;
+        columns: 3;
+        fixed-columns: true;
+        lines: 3;
         fixed-height: false;
-        spacing: 12px;
+        dynamic: true;
+        spacing: 6px;
+        margin: 0px 15px 15px 15px;
+      }
+
+      mode-switcher {
+        enabled: false;
       }
 
       element {
         orientation: vertical;
-        padding: 6px;
+        padding: 4px;
       }
 
       element-icon {

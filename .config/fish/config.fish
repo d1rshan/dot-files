@@ -5,7 +5,8 @@
 # ── INTERACTIVE SHELL ────────────────────────────────────────────────
 if status is-interactive
     set fish_greeting ""
-    fastfetch --logo none
+    # fastfetch --logo none
+    nerdfetch
 end
 
 # ── ALIASES ──────────────────────────────────────────────────────────
