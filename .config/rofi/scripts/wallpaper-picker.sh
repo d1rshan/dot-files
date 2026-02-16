@@ -44,22 +44,16 @@ CHOICE=$(
         lines: 3;
         fixed-height: false;
         dynamic: true;
-        spacing: 6px;
-        margin: 0px 15px 15px 15px;
-      }
-
-      mode-switcher {
-        enabled: false;
       }
 
       element {
         orientation: vertical;
-        padding: 4px;
       }
 
       element-icon {
         size: 200px;
         horizontal-align: 0.5;
+        margin: 0px 0px 2px 0px;
       }
 
       element-text {

@@ -6,7 +6,7 @@
 configuration {
     modi: "drun";
     show-icons: true;
-    sidebar-mode: true;
+    sidebar-mode: false;
 
     display-drun: "Apps";
 }

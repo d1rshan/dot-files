@@ -21,18 +21,13 @@ fi
 selection="$(
   rofi -modi emoji -show emoji -emoji-format '{emoji}' \
     -p "Emoji" \
+    -theme "$HOME/.config/rofi/themes/glass.rasi" \
     -theme-str "
-    mainbox {
-      children: [ inputbar, listview ];
-    }
-
     listview {
       layout: vertical;
       columns: ${EMOJI_COLUMNS};
       fixed-columns: true;
       lines: ${EMOJI_LINES};
-      spacing: 8px;
-      margin: 0px 12px 12px 12px;
       dynamic: false;
       fixed-height: true;
     }
@@ -40,23 +35,10 @@ selection="$(
     element {
       orientation: horizontal;
       children: [ element-text ];
-      padding: 8px 4px;
-      border-radius: 8px;
     }
 
     element-text {
       horizontal-align: 0.5;
-      vertical-align: 0.5;
-      expand: true;
-      margin: 0px;
-    }
-
-    inputbar {
-      padding: 10px 12px;
-    }
-
-    mode-switcher {
-      enabled: false;
     }"
 )"
 

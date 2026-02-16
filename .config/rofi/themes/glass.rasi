@@ -31,7 +31,7 @@ mainbox {
     spacing: 0px;
     padding: 0px;
     orientation: vertical;
-    children: [ inputbar, listview, mode-switcher ];
+    children: [ inputbar, listview ];
     background-color: transparent;
 }
 
@@ -41,8 +41,9 @@ inputbar {
     spacing: 0px;
     padding: 8px 10px;
     margin: 0px;
-    background-color: transparent;
-    border: 0px;
+    background-color: rgba(194, 194, 197, 0.05);
+    border: 0 0 1px 0;
+    border-color: rgba(194, 194, 197, 0.15);
     border-radius: 0px;
     children: [ entry ];
 }

@@ -101,29 +101,14 @@ selection_index=$(
     -theme-str '
     listview {
       lines: 9;
-      spacing: 3px;
-      dynamic: true;
-      fixed-height: false;
-      margin: 0px 6px 8px 6px;
-    }
-
-    element {
-      orientation: horizontal;
-      padding: 6px 8px;
-      border-radius: 8px;
     }
 
     element-icon {
       size: 1.8em;
-      margin: 0px 8px 0px 0px;
-      vertical-align: 0.5;
-      horizontal-align: 0.5;
     }
 
     element-text {
       vertical-align: 0.5;
-      expand: true;
-      margin: 0px;
     }'
 )
 
