@@ -4,6 +4,9 @@
 # ALLOW .CONFIG ITSELF
 !.config/
 
+# ALLOW README
+!README.md
+
 # ALLOW SELECTED CONFIGS
 !.config/hypr/
 !.config/hypr/**
