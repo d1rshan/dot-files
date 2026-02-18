@@ -7,6 +7,10 @@
 # ALLOW README
 !README.md
 
+!.local/
+!.local/bin/
+!.local/bin/**
+
 # ALLOW SELECTED CONFIGS
 !.config/hypr/
 !.config/hypr/**
