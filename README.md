@@ -5,48 +5,45 @@
 ## Screenshots
 
 ### Home
->
 > Waybar
 <p align="center">
-  <img src="screenshots/home.png" alt="Hyprland desktop home view" width="100%" />
+  <img src="screenshots/home.webp" alt="Hyprland desktop home view" width="100%" />
 </p>
 
 ### Rofi
->
 > App Launcher, Wallpaper Switcher, Clipboard History, Emoji Picker.
 <p align="center">
-  <img src="screenshots/rofi-app-launcher.png" alt="Rofi app launcher" width="49%" />
-  <img src="screenshots/rofi-wallpaper-switcher.png" alt="Rofi wallpaper switcher" width="49%" />
+  <img src="screenshots/rofi-app-launcher.webp" alt="Rofi app launcher" width="49%" />
+  <img src="screenshots/rofi-wallpaper-switcher.webp" alt="Rofi wallpaper switcher" width="49%" />
 </p>
 <p align="center">
-  <img src="screenshots/rofi-clipboard.png" alt="Rofi clipboard menu" width="49%" />
-  <img src="screenshots/rofi-emojis.png" alt="Rofi emoji picker" width="49%" />
+  <img src="screenshots/rofi-clipboard.webp" alt="Rofi clipboard menu" width="49%" />
+  <img src="screenshots/rofi-emojis.webp" alt="Rofi emoji picker" width="49%" />
 </p>
 
-### Wallpapers
->
+### Theme Palette
 > Theme colors are generated from the active wallpaper using `pywal`.
 <p align="center">
-  <img src="screenshots/wallpaper-1.png" alt="Wallpaper 1" width="49%" />
-  <img src="screenshots/wallpaper-2.png" alt="Wallpaper 2" width="49%" />
+  <img src="screenshots/wallpaper-1.webp" alt="Wallpaper 1" width="49%" />
+  <img src="screenshots/wallpaper-2.webp" alt="Wallpaper 2" width="49%" />
 </p>
 <p align="center">
-  <img src="screenshots/wallpaper-3.png" alt="Wallpaper 3" width="49%" />
-  <img src="screenshots/wallpaper-4.png" alt="Wallpaper 4" width="49%" />
+  <img src="screenshots/wallpaper-3.webp" alt="Wallpaper 3" width="49%" />
+  <img src="screenshots/wallpaper-4.webp" alt="Wallpaper 4" width="49%" />
 </p>
 
 ## Structure
 
 ```text
 .config/
-├── hypr/           # WM, lock, idle, paper
-├── waybar/         # status bar
-├── rofi/           # launcher + themes
-├── fish/           # shell
-├── kitty/          # terminal
-├── nvim/           # editor
 ├── fastfetch/      # fetch config
+├── fish/           # shell
+├── hypr/           # WM, lock, idle, paper
+├── kitty/          # terminal
 ├── mako/           # notifications
+├── nvim/           # editor
+├── rofi/           # launcher + themes
+├── waybar/         # status bar
 └── starship.toml   # prompt
 ```
 
