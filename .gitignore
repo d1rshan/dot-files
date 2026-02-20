@@ -7,9 +7,14 @@
 # ALLOW README
 !README.md
 
+# ALLOW SCRIPTS
 !.local/
 !.local/bin/
 !.local/bin/**
+
+# ALLOW SCRIPTS
+!screenshots/
+!screenshots/**
 
 # ALLOW SELECTED CONFIGS
 !.config/hypr/
