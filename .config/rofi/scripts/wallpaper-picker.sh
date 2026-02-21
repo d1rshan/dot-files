@@ -7,7 +7,7 @@
 
 set -u
 
-WALLPAPER_DIR="${WALLPAPER_DIR:-$HOME/Pictures/Wallpapers}"
+WALLPAPER_DIR="${WALLPAPER_DIR:-$HOME/walls}"
 HYPRPAPER_CONF="${HYPRPAPER_CONF:-$HOME/.config/hypr/hyprpaper.conf}"
 HYPRLOCK_CONF="${HYPRLOCK_CONF:-$HOME/.config/hypr/hyprlock.conf}"
 

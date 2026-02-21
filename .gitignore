@@ -12,9 +12,13 @@
 !.local/bin/
 !.local/bin/**
 
-# ALLOW SCRIPTS
+# ALLOW SCREENSHOTS
 !screenshots/
 !screenshots/**
+
+# ALLOW WALLPAPERS
+!walls/
+!walls/**
 
 # ALLOW SELECTED CONFIGS
 !.config/hypr/
@@ -45,4 +49,3 @@
 !.config/mako/**
 
 !.config/starship.toml
-

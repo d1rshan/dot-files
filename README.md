@@ -5,12 +5,14 @@
 ## Screenshots
 
 ### Home
+>
 > Waybar
 <p align="center">
   <img src="screenshots/home.webp" alt="Hyprland desktop home view" width="100%" />
 </p>
 
 ### Rofi
+>
 > App Launcher, Wallpaper Switcher, Clipboard History, Emoji Picker.
 <p align="center">
   <img src="screenshots/rofi-app-launcher.webp" alt="Rofi app launcher" width="49%" />
@@ -22,6 +24,7 @@
 </p>
 
 ### Theme Palette
+>
 > Theme colors are generated from the active wallpaper using `pywal`.
 <p align="center">
   <img src="screenshots/wallpaper-1.webp" alt="Wallpaper 1" width="49%" />
@@ -46,5 +49,15 @@
 ├── waybar/         # status bar
 └── starship.toml   # prompt
 ```
+
+## Star History
+
+<a href="https://www.star-history.com/#d1rshan/dot-files&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=d1rshan/dot-files&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=d1rshan/dot-files&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=d1rshan/dot-files&type=Date" />
+  </picture>
+</a>
 
 hyprland dotfiles by **[@d1rshan](https://github.com/d1rshan)**
