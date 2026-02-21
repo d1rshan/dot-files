@@ -2,13 +2,10 @@
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=C8C8C8&center=true&vCenter=true&width=500&lines=%E3%80%8C%E2%9C%A6+HYPRLAND+RICE+%E2%9C%A6%E3%80%8D;%E3%80%8C%E2%9C%A6+MINIMAL+%C3%97+FUNCTIONAL+%E2%9C%A6%E3%80%8D" alt="Hyprland rice typing banner" />
 </p>
 
-## Screenshots
-
-### Home
->
-> Waybar
 <p align="center">
-  <img src="screenshots/home.webp" alt="Hyprland desktop home view" width="100%" />
+  <img src="screenshots/home.webp" alt="Hyprland desktop home view 1" width="100%" />
+</p>
+<p align="center">
 </p>
 
 ### Rofi
@@ -35,19 +32,57 @@
   <img src="screenshots/wallpaper-4.webp" alt="Wallpaper 4" width="49%" />
 </p>
 
+## Installation
+
+1. Install prerequisites (Arch):
+
+```bash
+sudo pacman -S --needed hyprland hyprpaper hyprlock hypridle hyprshot waybar rofi kitty fish neovim mako fastfetch starship wl-clipboard
+yay -S python-pywal16
+sudo pacman -S --needed ttf-jetbrains-mono-nerd ttf-font-awesome noto-fonts-emoji
+```
+2. Backup your current configs:
+
+```bash
+cp -r ~/.config ~/.config.bak
+```
+3. Clone and copy:
+
+```bash
+git clone https://github.com/d1rshan/dot-files.git ~/dot-files
+mkdir -p ~/.config
+cp -r ~/dot-files/.config/{hypr,waybar,rofi,kitty,nvim,fastfetch,fish,mako} ~/.config/
+cp ~/dot-files/.config/starship.toml ~/.config/
+cp -r ~/dot-files/.local/bin ~/.local/ 2>/dev/null || true
+```
+4. Restart your session or reload apps (`hyprctl reload`, restart `waybar`, etc.).
+
+> [!TIP]
+> Wallpapers: put your files in `~/walls` (used by the rofi wallpaper picker).
+
+> [!TIP]
+> Main mod key: this setup uses `LALT`. If you want the usual `SUPER`, change `$mainMod = LALT` to `$mainMod = SUPER` in your Hypr config.
+
 ## Structure
 
 ```text
-.config/
-├── fastfetch/      # fetch config
-├── fish/           # shell
-├── hypr/           # WM, lock, idle, paper
-├── kitty/          # terminal
-├── mako/           # notifications
-├── nvim/           # editor
-├── rofi/           # launcher + themes
-├── waybar/         # status bar
-└── starship.toml   # prompt
+.
+├── .config
+│   ├── fastfetch
+│   ├── fish
+│   ├── hypr
+│   ├── kitty
+│   ├── mako
+│   ├── nvim
+│   ├── rofi
+│   ├── waybar
+│   └── starship.toml
+├── .local
+│   └── bin
+│       ├── chika
+│       └── pipes
+├── screenshots
+└── walls
 ```
 
 ## Star History
