@@ -37,7 +37,7 @@
 quick setup:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/krishkalaria12/dots/main/setup.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/d1rshan/dots/main/setup.sh)
 ```
 
 manual steps:
