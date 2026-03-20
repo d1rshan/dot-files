@@ -48,7 +48,7 @@ timestamp() {
 }
 
 log() {
-  printf '[setup] %s\n' "$*"
+  printf '[setup] %s\n' "$*" >&2
 }
 
 warn() {
